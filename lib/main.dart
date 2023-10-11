@@ -14,7 +14,7 @@ import 'package:myapp/page/loginpage.dart';
 // import 'package:myapp/page/regispage.dart';
 
 void main() async {
-  WidgetFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

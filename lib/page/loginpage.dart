@@ -128,6 +128,15 @@ class Scene extends StatelessWidget {
                               width: 20 * fem,
                               height: 20 * fem,
                             ),
+                            const SizedBox(width: 45),
+                            Expanded(
+                                child: TextField(
+                              style: TextStyle(fontSize: 28),
+                              decoration: InputDecoration(
+                                hintText: 'Enter your username',
+                                border: InputBorder.none,
+                              ),
+                            ))
                             // Add any text or additional widgets here if needed.
                           ],
                         ),
@@ -150,10 +159,20 @@ class Scene extends StatelessWidget {
                               width: 20 * fem,
                               height: 20 * fem,
                             ),
+                            const SizedBox(width: 45),
+                            Expanded(
+                                child: TextField(
+                              style: TextStyle(fontSize: 28),
+                              decoration: InputDecoration(
+                                hintText: 'Enter your password',
+                                border: InputBorder.none,
+                              ),
+                            ))
                             // Add any text or additional widgets here if needed.
                           ],
                         ),
                       ),
+                      SizedBox(height: 30),
                       Container(
                         // loginbuttonxuP (30:22)
                         margin: EdgeInsets.fromLTRB(
@@ -188,6 +207,7 @@ class Scene extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SizedBox(height: 20),
                       Container(
                         // signupbuttonndX (34:10)
                         margin: EdgeInsets.fromLTRB(
