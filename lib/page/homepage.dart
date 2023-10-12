@@ -88,7 +88,7 @@ class Scene extends StatelessWidget {
             ),
             Positioned(
               // waterconditionTC5 (47:92)
-              left: 51 * fem,
+              left: 36 * fem,
               top: 150 * fem,
               child: Center(
                 child: Align(
