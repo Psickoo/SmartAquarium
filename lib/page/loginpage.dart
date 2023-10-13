@@ -7,6 +7,9 @@ import 'package:myapp/utils.dart';
 class Scene extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _usernameController = TextEditingController();
+    final _passwordController = TextEditingController();
+
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -111,6 +114,7 @@ class Scene extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SizedBox(height: 20),
                       Container(
                         // passwordm4D (I34:320;13:64)
                         margin: EdgeInsets.all(5),
@@ -130,7 +134,8 @@ class Scene extends StatelessWidget {
                             ),
                             const SizedBox(width: 45),
                             Expanded(
-                                child: TextField(
+                                child: TextFormField(
+                              controller: _usernameController,
                               style: TextStyle(fontSize: 28),
                               decoration: InputDecoration(
                                 hintText: 'Enter your username',
@@ -141,6 +146,7 @@ class Scene extends StatelessWidget {
                           ],
                         ),
                       ),
+                      SizedBox(height: 20),
                       Container(
                         // passwordm4D (I34:320;13:64)
                         margin: EdgeInsets.all(5),
@@ -161,18 +167,20 @@ class Scene extends StatelessWidget {
                             ),
                             const SizedBox(width: 45),
                             Expanded(
-                                child: TextField(
+                                child: TextFormField(
+                              controller: _passwordController,
                               style: TextStyle(fontSize: 28),
                               decoration: InputDecoration(
                                 hintText: 'Enter your password',
                                 border: InputBorder.none,
                               ),
+                              obscureText: true,
                             ))
                             // Add any text or additional widgets here if needed.
                           ],
                         ),
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 35),
                       Container(
                         // loginbuttonxuP (30:22)
                         margin: EdgeInsets.fromLTRB(
@@ -207,7 +215,7 @@ class Scene extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
+                      SizedBox(height: 35),
                       Container(
                         // signupbuttonndX (34:10)
                         margin: EdgeInsets.fromLTRB(

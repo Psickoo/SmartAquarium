@@ -7,6 +7,10 @@ import 'package:myapp/utils.dart';
 class Scene extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _regisController = TextEditingController();
+    final _passController = TextEditingController();
+    final _confirmPassController = TextEditingController();
+
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -121,6 +125,21 @@ class Scene extends StatelessWidget {
                           border: Border.all(color: Color(0xff176b87)),
                           borderRadius: BorderRadius.circular(25 * fem),
                         ),
+                        child: Row(
+                          children: [
+                            SizedBox(width: 40),
+                            Expanded(
+                              child: TextFormField(
+                              controller : _regisController,
+                              style: TextStyle(fontSize: 28),
+                                decoration: InputDecoration(
+                                hintText: 'Enter Username',
+                                border: InputBorder.none,
+                              ),
+                              ),
+                            )
+                          ],
+                          ),
                       ),
                     ),
                     Container(
@@ -133,6 +152,21 @@ class Scene extends StatelessWidget {
                         border: Border.all(color: Color(0xff176b87)),
                         borderRadius: BorderRadius.circular(25 * fem),
                       ),
+                      child: Row(
+                          children: [
+                            SizedBox(width: 40),
+                            Expanded(
+                              child: TextFormField(
+                              controller : _passController,
+                              style: TextStyle(fontSize: 28),
+                                decoration: InputDecoration(
+                                hintText: 'Enter Password',
+                                border: InputBorder.none,
+                              ),
+                              ),
+                            )
+                          ],
+                          ),
                     ),
                     Container(
                       // passwordp2D (I34:354;34:306)
@@ -144,6 +178,21 @@ class Scene extends StatelessWidget {
                         border: Border.all(color: Color(0xff176b87)),
                         borderRadius: BorderRadius.circular(25 * fem),
                       ),
+                      child: Row(
+                          children: [
+                            SizedBox(width: 40),
+                            Expanded(
+                              child: TextFormField(
+                              controller : _confirmPassController,
+                              style: TextStyle(fontSize: 28),
+                                decoration: InputDecoration(
+                                hintText: 'Confirm Password',
+                                border: InputBorder.none,
+                              ),
+                              ),
+                            )
+                          ],
+                          ),
                     ),
                     Container(
                       // signupLFT (34:357)
