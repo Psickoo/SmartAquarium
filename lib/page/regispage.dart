@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 
-class Scene extends StatelessWidget {
+class RegisPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _regisController = TextEditingController();
@@ -14,9 +14,8 @@ class Scene extends StatelessWidget {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Container(
-      width: double.infinity,
-      child: Container(
+    return Scaffold(
+      body: Container(
         // regispage2Ro (11:119)
         width: double.infinity,
         height: 844 * fem,
@@ -75,7 +74,7 @@ class Scene extends StatelessWidget {
               top: 100 * fem,
               child: Container(
                 padding: EdgeInsets.fromLTRB(
-                    28 * fem, 36.46 * fem, 29 * fem, 76 * fem),
+                    28 * fem, 36.46 * fem, 29 * fem, 60 * fem),
                 width: 300 * fem,
                 height: 550 * fem,
                 decoration: BoxDecoration(
@@ -111,114 +110,114 @@ class Scene extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      // usernameS1f (34:344)
+                   Container(
+                      // username
                       margin: EdgeInsets.fromLTRB(
                           8 * fem, 0 * fem, 8 * fem, 31.17 * fem),
+                      // padding: EdgeInsets.fromLTRB(
+                      //     0 * fem, 8 * fem, 0 * fem, 8 * fem),
                       width: double.infinity,
-                      height: 30.25 * fem,
-                      child: Container(
-                        // usernameMeR (I34:344;13:66)
-                        width: double.infinity,
-                        height: double.infinity,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Color(0xff176b87)),
-                          borderRadius: BorderRadius.circular(25 * fem),
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(width: 40),
-                            Expanded(
-                              child: TextFormField(
-                              controller : _regisController,
-                              style: TextStyle(fontSize: 28),
-                                decoration: InputDecoration(
+                      height: 30.25 * fem,  
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Color(0xff176b87)),
+                        borderRadius: BorderRadius.circular(25 * fem),
+                      ),
+                      child: Center(
+                            child: TextFormField(
+                              textAlign: TextAlign.center,
+                              textAlignVertical: TextAlignVertical.center,
+                              controller: _passController,
+                              style: TextStyle(fontSize: 12),
+                              decoration: InputDecoration(
                                 hintText: 'Enter Username',
                                 border: InputBorder.none,
                               ),
-                              ),
-                            )
-                          ],
-                          ),
+                            ),
+                          )
                       ),
-                    ),
                     Container(
                       // passwordVVj (I34:351;34:329)
                       margin: EdgeInsets.fromLTRB(
                           8 * fem, 0 * fem, 8 * fem, 31.17 * fem),
+                      // padding: EdgeInsets.fromLTRB(
+                      //     0 * fem, 8 * fem, 0 * fem, 8 * fem),
                       width: double.infinity,
-                      height: 30.25 * fem,
+                      height: 30.25 * fem,  
                       decoration: BoxDecoration(
                         border: Border.all(color: Color(0xff176b87)),
                         borderRadius: BorderRadius.circular(25 * fem),
                       ),
-                      child: Row(
-                          children: [
-                            SizedBox(width: 40),
-                            Expanded(
-                              child: TextFormField(
-                              controller : _passController,
-                              style: TextStyle(fontSize: 28),
-                                decoration: InputDecoration(
+                      child: Center(
+                            child: TextFormField(
+                              textAlign: TextAlign.center,
+                              textAlignVertical: TextAlignVertical.center,
+                              controller: _passController,
+                              style: TextStyle(fontSize: 12),
+                              decoration: InputDecoration(
                                 hintText: 'Enter Password',
                                 border: InputBorder.none,
                               ),
-                              ),
-                            )
-                          ],
-                          ),
-                    ),
+                            ),
+                          )
+                      ),
                     Container(
                       // passwordp2D (I34:354;34:306)
                       margin: EdgeInsets.fromLTRB(
                           8 * fem, 0 * fem, 8 * fem, 31.17 * fem),
+                      // padding: EdgeInsets.fromLTRB(
+                      // 0 * fem, 8 * fem, 0 * fem, 8 * fem),
                       width: double.infinity,
                       height: 30.25 * fem,
                       decoration: BoxDecoration(
                         border: Border.all(color: Color(0xff176b87)),
                         borderRadius: BorderRadius.circular(25 * fem),
                       ),
-                      child: Row(
-                          children: [
-                            SizedBox(width: 40),
-                            Expanded(
-                              child: TextFormField(
-                              controller : _confirmPassController,
-                              style: TextStyle(fontSize: 28),
-                                decoration: InputDecoration(
+                      child: Center(
+                            child: TextFormField(
+                              textAlign: TextAlign.center,
+                              textAlignVertical: TextAlignVertical.center,
+                              controller: _confirmPassController,
+                              style: TextStyle(fontSize: 12),
+                              decoration: InputDecoration(
                                 hintText: 'Confirm Password',
                                 border: InputBorder.none,
                               ),
-                              ),
-                            )
-                          ],
-                          ),
+                            ),
+                          )
                     ),
                     Container(
                       // signupLFT (34:357)
                       margin: EdgeInsets.fromLTRB(
                           8 * fem, 0 * fem, 8 * fem, 45.33 * fem),
-                      width: double.infinity,
-                      height: 30.25 * fem,
-                      decoration: BoxDecoration(
-                        color: Color(0xff0075ff),
-                        borderRadius: BorderRadius.circular(15 * fem),
-                      ),
-                      child: Center(
-                        child: Center(
-                          child: Text(
-                            'Sign Up',
-                            textAlign: TextAlign.center,
-                            style: SafeGoogleFont(
-                              'Inter',
-                              fontSize: 20 * ffem,
-                              fontWeight: FontWeight.w800,
-                              height: 1.2125 * ffem / fem,
-                              color: Color(0xffffffff),
+                          child: TextButton(
+                          onPressed: () {},
+                          style: TextButton.styleFrom(
+                            padding: EdgeInsets.zero,
+                          ),
+                          child: Container(
+                            width: double.infinity,
+                            height: 33 * fem,
+                            decoration: BoxDecoration(
+                              color: Color(0xff0075ff),
+                              borderRadius: BorderRadius.circular(15 * fem),
+                            ),
+                            child: Center(
+                              child: Center(
+                                child: Text(
+                                  'Sign Up',
+                                  textAlign: TextAlign.center,
+                                  style: SafeGoogleFont(
+                                    'Inter',
+                                    fontSize: 20 * ffem,
+                                    fontWeight: FontWeight.w800,
+                                    height: 1.2125 * ffem / fem,
+                                    color: Color(0xffffffff),
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
                     ),
                     Container(
                       // orzau (37:280)

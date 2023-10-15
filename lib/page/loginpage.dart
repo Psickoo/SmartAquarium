@@ -3,13 +3,13 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
+import 'package:myapp/page/regispage.dart';
 
-class Scene extends StatelessWidget {
+class LoginPage extends StatelessWidget {
+  final _usernameController = TextEditingController();
+  final _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final _usernameController = TextEditingController();
-    final _passwordController = TextEditingController();
-
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
@@ -74,9 +74,9 @@ class Scene extends StatelessWidget {
               top: 243 * fem,
               child: Container(
                 padding:
-                    EdgeInsets.fromLTRB(36 * fem, 40 * fem, 37 * fem, 39 * fem),
+                    EdgeInsets.fromLTRB(30 * fem, 40 * fem, 37 * fem, 10 * fem),
                 width: 300 * fem,
-                height: 358 * fem,
+                height: 370 * fem,
                 decoration: BoxDecoration(
                   border: Border.all(color: Color(0x19000000)),
                   color: Color(0xffffffff),
@@ -100,7 +100,7 @@ class Scene extends StatelessWidget {
                         // welcomebackZgu (I34:340;11:54)
                         child: Container(
                           margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 1 * fem, 30 * fem),
+                              0 * fem, 0 * fem, 1 * fem, 27 * fem),
                           child: Text(
                             'Welcome !',
                             textAlign: TextAlign.center,
@@ -114,12 +114,12 @@ class Scene extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
                       Container(
                         // passwordm4D (I34:320;13:64)
-                        margin: EdgeInsets.all(5),
+                        margin: EdgeInsets.fromLTRB(
+                            4 * fem, 4 * fem, 4 * fem, 12 * fem),
                         padding: EdgeInsets.fromLTRB(
-                            23 * fem, 6 * fem, 23 * fem, 7 * fem),
+                            25 * fem, 0 * fem, 10 * fem, 0 * fem),
                         width: double.infinity,
                         decoration: BoxDecoration(
                           border: Border.all(color: Color(0xff176b87)),
@@ -132,11 +132,11 @@ class Scene extends StatelessWidget {
                               width: 20 * fem,
                               height: 20 * fem,
                             ),
-                            const SizedBox(width: 45),
+                            SizedBox(width: 20 * fem),
                             Expanded(
                                 child: TextFormField(
                               controller: _usernameController,
-                              style: TextStyle(fontSize: 28),
+                              style: TextStyle(fontSize: 12 * fem),
                               decoration: InputDecoration(
                                 hintText: 'Enter your username',
                                 border: InputBorder.none,
@@ -146,12 +146,11 @@ class Scene extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 20),
                       Container(
                         // passwordm4D (I34:320;13:64)
-                        margin: EdgeInsets.all(5),
+                        margin: EdgeInsets.all(4 * fem),
                         padding: EdgeInsets.fromLTRB(
-                            23 * fem, 6 * fem, 23 * fem, 7 * fem),
+                            25 * fem, 0 * fem, 10 * fem, 0 * fem),
                         width: double.infinity,
                         decoration: BoxDecoration(
                           border: Border.all(color: Color(0xff176b87)),
@@ -165,26 +164,25 @@ class Scene extends StatelessWidget {
                               width: 20 * fem,
                               height: 20 * fem,
                             ),
-                            const SizedBox(width: 45),
+                            SizedBox(width: 20 * fem),
                             Expanded(
                                 child: TextFormField(
                               controller: _passwordController,
-                              style: TextStyle(fontSize: 28),
+                              style: TextStyle(fontSize: 12),
                               decoration: InputDecoration(
                                 hintText: 'Enter your password',
                                 border: InputBorder.none,
                               ),
-                              obscureText: true,
                             ))
                             // Add any text or additional widgets here if needed.
                           ],
                         ),
                       ),
-                      SizedBox(height: 35),
+                      SizedBox(height: 10 * fem),
                       Container(
                         // loginbuttonxuP (30:22)
                         margin: EdgeInsets.fromLTRB(
-                            5 * fem, 5 * fem, 5 * fem, 10 * fem),
+                            5 * fem, 10 * fem, 5 * fem, 5 * fem),
                         child: TextButton(
                           onPressed: () {},
                           style: TextButton.styleFrom(
@@ -215,7 +213,7 @@ class Scene extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 35),
+                      SizedBox(height: 6 * fem),
                       Container(
                         // signupbuttonndX (34:10)
                         margin: EdgeInsets.fromLTRB(
@@ -226,10 +224,9 @@ class Scene extends StatelessWidget {
                           children: [
                             Container(
                               // newuserX5K (34:6)
-                              margin: EdgeInsets.fromLTRB(
-                                  0 * fem, 0 * fem, 7 * fem, 0 * fem),
+                              margin: EdgeInsets.all(5 * fem),
                               child: Text(
-                                'NEW USER ?',
+                                'New User ?',
                                 style: SafeGoogleFont(
                                   'Inter',
                                   fontSize: 15 * ffem,
@@ -241,7 +238,13 @@ class Scene extends StatelessWidget {
                             ),
                             TextButton(
                               // signupRAh (34:9)
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => RegisPage()),
+                                );
+                              },
                               style: TextButton.styleFrom(
                                 padding: EdgeInsets.zero,
                               ),

@@ -5,10 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:myapp/page/loginpage.dart';
 // import 'package:myapp/page/logo.dart';
 // import 'package:myapp/page/homepage.dart';
 // import 'package:myapp/page/schedule.dart';
-import 'package:myapp/page/loginpage.dart';
 // import 'package:myapp/page/about.dart';
 // import 'package:myapp/page/rgb.dart';
 // import 'package:myapp/page/regispage.dart';
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
 		),
 		home: Scaffold(
 		body: SingleChildScrollView(
-			child: Scene(),
+			child: LoginPage(),
 		),
 		),
 	);
