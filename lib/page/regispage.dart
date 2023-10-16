@@ -15,7 +15,8 @@ class RegisPage extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      body: Container(
+      body: SingleChildScrollView(
+      child: Container(
         // regispage2Ro (11:119)
         width: double.infinity,
         height: 844 * fem,
@@ -258,8 +259,6 @@ class RegisPage extends StatelessWidget {
                           ),
                           Container(
                             // line1v7B (34:362)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 0 * fem),
                             width: 73 * fem,
                             height: 1 * fem,
                             decoration: BoxDecoration(
@@ -272,7 +271,7 @@ class RegisPage extends StatelessWidget {
                     Container(
                       // icongoogleicon3xV (37:59)
                       margin: EdgeInsets.fromLTRB(
-                          6 * fem, 0 * fem, 0 * fem, 0 * fem),
+                          0 * fem, 0 * fem, 0 * fem, 0 * fem),
                       child: TextButton(
                         onPressed: () {},
                         style: TextButton.styleFrom(
@@ -298,6 +297,7 @@ class RegisPage extends StatelessWidget {
           ],
         ),
       ),
+    ),
     );
   }
 }

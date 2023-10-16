@@ -173,6 +173,7 @@ class LoginPage extends StatelessWidget {
                                 hintText: 'Enter your password',
                                 border: InputBorder.none,
                               ),
+                              obscureText: true, // Set this property to true
                             ))
                             // Add any text or additional widgets here if needed.
                           ],
