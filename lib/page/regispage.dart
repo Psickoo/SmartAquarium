@@ -130,7 +130,7 @@ class RegisPage extends StatelessWidget {
                               controller: _passController,
                               style: TextStyle(fontSize: 12),
                               decoration: InputDecoration(
-                                hintText: 'Enter Username',
+                                hintText: 'Enter Email',
                                 border: InputBorder.none,
                               ),
                             ),
@@ -158,6 +158,7 @@ class RegisPage extends StatelessWidget {
                                 hintText: 'Enter Password',
                                 border: InputBorder.none,
                               ),
+                              obscureText: true, // Set this property to true
                             ),
                           )
                       ),
@@ -183,6 +184,7 @@ class RegisPage extends StatelessWidget {
                                 hintText: 'Confirm Password',
                                 border: InputBorder.none,
                               ),
+                              obscureText: true, // Set this property to true
                             ),
                           )
                     ),
