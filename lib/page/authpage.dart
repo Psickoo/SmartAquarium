@@ -14,7 +14,7 @@ import 'package:myapp/page/regispage.dart';
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return RegisPage();
+            return HomePage();
           } else {
             return LoginPage();
           }

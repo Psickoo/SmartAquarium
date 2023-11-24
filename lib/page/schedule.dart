@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
@@ -5,6 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 
 class Scene extends StatelessWidget {
+
+  final user = FirebaseAuth.instance.currentUser!;
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
@@ -71,7 +75,7 @@ class Scene extends StatelessWidget {
               child: Center(
                 child: Align(
                   child: SizedBox(
-                    width: 86*fem,
+                    width: 330*fem,
                     height: 37*fem,
                     child: Text(
                       'Hello,',
@@ -97,7 +101,7 @@ class Scene extends StatelessWidget {
                   width: 52*fem,
                   height: 25*fem,
                   child: Text(
-                    'Alvin',
+                    user.email!,
                     style: SafeGoogleFont (
                       'Inter',
                       fontSize: 20*ffem,

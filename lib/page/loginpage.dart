@@ -34,19 +34,22 @@ class _LoginPageState extends State<LoginPage> {
         email: _emailController.text,
         password: _passwordController.text,
       );
-      // pop the loading circle
+      // pop the loading circle when success
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
-      // pop the loading circle
+      // pop the loading circle when catch error
       Navigator.pop(context);
+      // print(e.code);
       // WRONG EMAIL
-      if (e.code == 'user-not-found') {
+      if (e.code == 'invalid-email') {
+        // print('No user found for that email.');
         // show error to user
         wrongEmailMessage();
       }
 
       // WRONG PASSWORD
-      else if (e.code == 'wrong-password') {
+      else if (e.code == 'invalid-login-credentials') {
+        // print('Wrong password provided for that user.');
         // show error to user
         wrongPasswordMessage();
       }
@@ -59,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
       context: context,
       builder: (context) {
         return const AlertDialog(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Color.fromARGB(255, 66, 146, 167),
           title: Center(
             child: Text(
               'Incorrect Email',
@@ -77,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
       context: context,
       builder: (context) {
         return const AlertDialog(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Color.fromARGB(255, 66, 146, 167),
           title: Center(
             child: Text(
               'Incorrect Password',
@@ -157,9 +160,9 @@ class _LoginPageState extends State<LoginPage> {
                   top: 243 * fem,
                   child: Container(
                     padding: EdgeInsets.fromLTRB(
-                        30 * fem, 40 * fem, 37 * fem, 10 * fem),
+                        30 * fem, 40 * fem, 30 * fem, 10 * fem),
                     width: 300 * fem,
-                    height: 370 * fem,
+                    height: 470 * fem,
                     decoration: BoxDecoration(
                       border: Border.all(color: Color(0x19000000)),
                       color: Color(0xffffffff),
@@ -183,7 +186,7 @@ class _LoginPageState extends State<LoginPage> {
                             // welcomebackZgu (I34:340;11:54)
                             child: Container(
                               margin: EdgeInsets.fromLTRB(
-                                  0 * fem, 0 * fem, 1 * fem, 27 * fem),
+                                  0 * fem, 0 * fem, 5 * fem, 27 * fem),
                               child: Text(
                                 'Welcome !',
                                 textAlign: TextAlign.center,
@@ -300,11 +303,11 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                           ),
-                          SizedBox(height: 6 * fem),
+                          SizedBox(height: 5 * fem),
                           Container(
                             // signupbuttonndX (34:10)
                             margin: EdgeInsets.fromLTRB(
-                                32 * fem, 0 * fem, 5 * fem, 0 * fem),
+                                45 * fem, 0 * fem, 10 * fem, 0 * fem),
                             width: double.infinity,
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -349,6 +352,73 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
                               ],
+                            ),
+                          ),
+                          Container(
+                            // orzau (37:280)
+                            margin: EdgeInsets.fromLTRB(
+                                22 * fem, 34.5 * fem, 22 * fem, 34.5 * fem),
+                            width: double.infinity,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  // line1X53 (34:361)
+                                  margin: EdgeInsets.fromLTRB(
+                                      0 * fem, 0 * fem, 17 * fem, 0 * fem),
+                                  width: 73 * fem,
+                                  height: 1 * fem,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff000000),
+                                  ),
+                                ),
+                                Center(
+                                  // orRgD (34:365)
+                                  child: Container(
+                                    margin: EdgeInsets.fromLTRB(
+                                        0 * fem, 0 * fem, 17 * fem, 0 * fem),
+                                    child: Text(
+                                      'OR',
+                                      textAlign: TextAlign.center,
+                                      style: SafeGoogleFont(
+                                        'Inter',
+                                        fontSize: 10 * ffem,
+                                        color: Color(0xff000000),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  // line1v7B (34:362)
+                                  width: 73 * fem,
+                                  height: 1 * fem,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xff000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            // icongoogleicon3xV (37:59)
+                            margin: EdgeInsets.fromLTRB(
+                                0 * fem, 0 * fem, 0 * fem, 0 * fem),
+                            child: TextButton(
+                              onPressed: () {},
+                              style: TextButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                              ),
+                              child: Container(
+                                width: 45 * fem,
+                                height: 45 * fem,
+                                child: Center(
+                                  child: Image.asset(
+                                    'assets/page-1/images/icon-google-icon-93f.png',
+                                    width: 45 * fem,
+                                    height: 45 * fem,
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ],
