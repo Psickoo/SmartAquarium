@@ -72,7 +72,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                // floatingloginz3b (47:85)
+                // FLoating GRafik
                 left: 30 * fem,
                 top: 191 * fem,
                 child: Container(
@@ -90,6 +90,8 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
+
+                  
                 ),
               ),
               Positioned(

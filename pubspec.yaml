@@ -69,26 +69,20 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/page-1/images/icon-home.png
-    - assets/page-1/images/schedule.png
     - assets/page-1/images/icon-menu.png
     - assets/page-1/images/icon-google-icon.png
     - assets/page-1/images/icon-user.png
     - assets/page-1/images/intersect.png
-    - assets/page-1/images/camera.png
-    - assets/page-1/images/rgb.png
     - assets/page-1/images/intersect-z3B.png
     - assets/page-1/images/icon-menu-dkM.png
     - assets/page-1/images/icon-lock.png
     - assets/page-1/images/intersect-2a5.png
-    - assets/page-1/images/rgb-pjT.png
     - assets/page-1/images/icon-menu-QEu.png
     - assets/page-1/images/intersect-g73.png
     - assets/page-1/images/icon-menu-qjw.png
     - assets/page-1/images/camera-AxZ.png
     - assets/page-1/images/property-1variant2.png
     - assets/page-1/images/icon-lock-gQy.png
-    - assets/page-1/images/schedule-i2D.png
     - assets/page-1/images/icon-chart-line.png
     - assets/page-1/images/intersect-1sf.png
     - assets/page-1/images/icon-lock-av5.png
@@ -97,9 +91,7 @@ flutter:
     - assets/page-1/images/property-1default.png
     - assets/page-1/images/icon-google-icon-93f.png
     - assets/page-1/images/homeui.png
-    - assets/page-1/images/schedule-Bbo.png
     - assets/page-1/images/homeui-3g5.png
-    - assets/page-1/images/rgb-RE1.png
     - assets/page-1/images/intersect-Xhb.png
     - assets/page-1/images/icon-user-qeH.png
     - assets/page-1/images/homeui-cZw.png
@@ -108,7 +100,6 @@ flutter:
     - assets/page-1/images/intersect-NEu.png
     - assets/page-1/images/intersect-Luo.png
     - assets/page-1/images/intersect-tPT.png
-    - assets/page-1/images/schedule-DXX.png
     - assets/page-1/images/intersect-RhK.png
     - assets/page-1/images/intersect-p33.png
     - assets/page-1/images/icon-user-zLq.png
@@ -116,7 +107,6 @@ flutter:
     - assets/page-1/images/intersect-e57.png
     - assets/page-1/images/intersect-n4q.png
     - assets/page-1/images/intersect-uMj.png
-    - assets/page-1/images/rgb-m5j.png
     - assets/page-1/images/intersect-bZT.png
     - assets/page-1/images/untitledartwork-removebg-preview-1.png
     - assets/page-1/images/intersect-NCy.png
