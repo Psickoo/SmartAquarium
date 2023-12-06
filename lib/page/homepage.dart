@@ -14,8 +14,7 @@ class HomePage extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      body: Container(
-        width: double.infinity,
+      body:SingleChildScrollView(
         child: Container(
           // homepageLbK (39:281)
           width: double.infinity,
@@ -92,7 +91,7 @@ class HomePage extends StatelessWidget {
               ),
               Positioned(
                 // waterconditionTC5 (47:92)
-                left: 36 * fem,
+                left: 31.5 * fem,
                 top: 150 * fem,
                 child: Center(
                   child: Align(
@@ -119,7 +118,7 @@ class HomePage extends StatelessWidget {
                 left: 50.5 * fem,
                 top: 59.5 * fem,
                 child: Container(
-                  width: 300 * fem,
+                  width: 400 * fem,
                   height: 70.5 * fem,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
