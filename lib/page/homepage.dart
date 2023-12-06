@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/components/bottom_nav_bar.dart';
 import 'package:myapp/utils.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,6 +15,8 @@ class HomePage extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
+      bottomNavigationBar: myNavBar(),
+      backgroundColor:  Colors.transparent,
       body:SingleChildScrollView(
         child: Container(
           // homepageLbK (39:281)
