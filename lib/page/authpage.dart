@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/components/page_navigator.dart';
 import 'package:myapp/page/loginpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:myapp/page/homepage.dart';
@@ -14,7 +15,7 @@ import 'package:myapp/page/regispage.dart';
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return HomePage();
+            return const pageNav();
           } else {
             return LoginPage();
           }

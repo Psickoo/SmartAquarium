@@ -4,9 +4,16 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/components/bottom_nav_bar.dart';
+import 'package:myapp/page/rgb.dart';
+import 'package:myapp/page/schedule.dart';
 import 'package:myapp/utils.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   final user = FirebaseAuth.instance.currentUser!;
 
   @override
@@ -15,9 +22,8 @@ class HomePage extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      bottomNavigationBar: myNavBar(),
-      backgroundColor:  Colors.transparent,
-      body:SingleChildScrollView(
+      backgroundColor: Colors.transparent,
+      body: SingleChildScrollView(
         child: Container(
           // homepageLbK (39:281)
           width: double.infinity,
@@ -90,8 +96,6 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  
                 ),
               ),
               Positioned(
@@ -145,7 +149,6 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       Container(
                         // alvinhEq (54:65)
                         margin: EdgeInsets.fromLTRB(
@@ -196,22 +199,6 @@ class HomePage extends StatelessWidget {
                           color: Color(0xff176b87),
                         ),
                       ),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                // iconmenuLh7 (39:334)
-                left: 19 * fem,
-                top: 24 * fem,
-                child: Align(
-                  child: SizedBox(
-                    width: 25 * fem,
-                    height: 18.75 * fem,
-                    child: Image.asset(
-                      'assets/page-1/images/icon-menu-dkM.png',
-                      width: 25 * fem,
-                      height: 18.75 * fem,
                     ),
                   ),
                 ),
