@@ -22,15 +22,7 @@ class Scene extends StatelessWidget {
           width: double.infinity,
           height: 844*fem,
           decoration: BoxDecoration (
-            border: Border.all(color: Color(0xff000000)),
             color: Color(0xffffffff),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0x3f000000),
-                offset: Offset(0*fem, 4*fem),
-                blurRadius: 2*fem,
-              ),
-            ],
           ),
           child: Stack(
             children: [

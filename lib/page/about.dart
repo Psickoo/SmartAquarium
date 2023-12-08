@@ -2,30 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/components/page_navigator.dart';
 import 'package:myapp/utils.dart';
 
-class Scene extends StatelessWidget {
+class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return Container(
-      width: double.infinity,
-      child: Container(
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xff053B50),
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () {
+            Navigator.pop(context);
+            Navigator.push(context, MaterialPageRoute(builder: (context) => pageNav()));
+          },
+        ),
+      ),
+      body: Container(
         // aboutckq (63:661)
         width: double.infinity,
         height: 844 * fem,
         decoration: BoxDecoration(
-          border: Border.all(color: Color(0xff000000)),
           color: Color(0xff176b87),
-          boxShadow: [
-            BoxShadow(
-              color: Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-          ],
         ),
         child: Stack(
           children: [

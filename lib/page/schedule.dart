@@ -13,23 +13,15 @@ class Schedule extends StatelessWidget {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return SingleChildScrollView(
-      child: Container(
+    return Scaffold(
+      body: Container(
         width: double.infinity,
         child: Container(
           // scheduleLY1 (63:485)
           width: double.infinity,
           height: 844 * fem,
           decoration: BoxDecoration(
-            border: Border.all(color: Color(0xff000000)),
             color: Color(0xff176b87),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0x3f000000),
-                offset: Offset(0 * fem, 4 * fem),
-                blurRadius: 2 * fem,
-              ),
-            ],
           ),
           child: Stack(
             children: [
@@ -66,51 +58,6 @@ class Schedule extends StatelessWidget {
                         ),
                       ),
                     ],
-                  ),
-                ),
-              ),
-              Positioned(
-                // helloMLd (63:489)
-                left: 50.5 * fem,
-                top: 59.5 * fem,
-                child: Center(
-                  child: Align(
-                    child: SizedBox(
-                      width: 330 * fem,
-                      height: 37 * fem,
-                      child: Text(
-                        'Hello,',
-                        textAlign: TextAlign.center,
-                        style: SafeGoogleFont(
-                          'Inter',
-                          fontSize: 30 * ffem,
-                          fontWeight: FontWeight.w800,
-                          height: 1.2125 * ffem / fem,
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                // alvinQZo (63:490)
-                left: 56 * fem,
-                top: 105 * fem,
-                child: Align(
-                  child: SizedBox(
-                    width: 52 * fem,
-                    height: 25 * fem,
-                    child: Text(
-                      user.email!,
-                      style: SafeGoogleFont(
-                        'Inter',
-                        fontSize: 20 * ffem,
-                        fontWeight: FontWeight.w800,
-                        height: 1.2125 * ffem / fem,
-                        color: Color(0xffffffff),
-                      ),
-                    ),
                   ),
                 ),
               ),

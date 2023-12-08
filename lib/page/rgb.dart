@@ -13,23 +13,15 @@ class RGB extends StatelessWidget {
     double baseWidth = 390;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
-    return SingleChildScrollView(
-      child: Container(
+    return Scaffold(
+      body: Container(
         width: double.infinity,
         child: Container(
           // rgb4MF (63:584)
           width: double.infinity,
           height: 844 * fem,
           decoration: BoxDecoration(
-            border: Border.all(color: Color(0xff000000)),
             color: Color(0xff176b87),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0x3f000000),
-                offset: Offset(0 * fem, 4 * fem),
-                blurRadius: 2 * fem,
-              ),
-            ],
           ),
           child: Stack(
             children: [
@@ -63,54 +55,6 @@ class RGB extends StatelessWidget {
                           'assets/page-1/images/intersect-1sf.png',
                           width: 390 * fem,
                           height: 306 * fem,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                // hellosxu (63:622)
-                left: 50.5 * fem,
-                top: 59.5 * fem,
-                child: Container(
-                  width: 330 * fem,
-                  height: 70.5 * fem,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Center(
-                        // helloiyX (63:586)
-                        child: Container(
-                          margin: EdgeInsets.fromLTRB(
-                              0 * fem, 0 * fem, 0 * fem, 8.5 * fem),
-                          width: double.infinity,
-                          child: Text(
-                            'Hello,',
-                            textAlign: TextAlign.center,
-                            style: SafeGoogleFont(
-                              'Inter',
-                              fontSize: 30 * ffem,
-                              fontWeight: FontWeight.w800,
-                              height: 1.2125 * ffem / fem,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        // alvinHQM (63:587)
-                        margin: EdgeInsets.fromLTRB(
-                            5.5 * fem, 0 * fem, 0 * fem, 0 * fem),
-                        child: Text(
-                          user.email!,
-                          style: SafeGoogleFont(
-                            'Inter',
-                            fontSize: 20 * ffem,
-                            fontWeight: FontWeight.w800,
-                            height: 1.2125 * ffem / fem,
-                            color: Color(0xffffffff),
-                          ),
                         ),
                       ),
                     ],

@@ -106,15 +106,7 @@ class _LoginPageState extends State<LoginPage> {
             width: double.infinity,
             height: 844 * fem,
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xff000000)),
               color: Color(0xff176b87),
-              boxShadow: [
-                BoxShadow(
-                  color: Color(0x3f000000),
-                  offset: Offset(0 * fem, 4 * fem),
-                  blurRadius: 2 * fem,
-                ),
-              ],
             ),
             child: Stack(
               children: [
@@ -162,7 +154,7 @@ class _LoginPageState extends State<LoginPage> {
                     padding: EdgeInsets.fromLTRB(
                         30 * fem, 40 * fem, 30 * fem, 10 * fem),
                     width: 300 * fem,
-                    height: 470 * fem,
+                    height: 500 * fem,
                     decoration: BoxDecoration(
                       border: Border.all(color: Color(0x19000000)),
                       color: Color(0xffffffff),

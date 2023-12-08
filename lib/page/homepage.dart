@@ -22,22 +22,13 @@ class _HomePageState extends State<HomePage> {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: SingleChildScrollView(
-        child: Container(
+      // body: SingleChildScrollView(
+        body: Container(
           // homepageLbK (39:281)
           width: double.infinity,
           height: 844 * fem,
           decoration: BoxDecoration(
-            border: Border.all(color: Color(0xff000000)),
             color: Color(0xff176b87),
-            boxShadow: [
-              BoxShadow(
-                color: Color(0x3f000000),
-                offset: Offset(0 * fem, 4 * fem),
-                blurRadius: 2 * fem,
-              ),
-            ],
           ),
           child: Stack(
             children: [
@@ -206,7 +197,7 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-      ),
+      // ),
     );
   }
 }
