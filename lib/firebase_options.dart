@@ -48,6 +48,7 @@ class DefaultFirebaseOptions {
     appId: '1:333510438076:web:f9d18ae6b5be946e7474b9',
     messagingSenderId: '333510438076',
     projectId: 'trspe-86989',
+    databaseURL: 'https://trspe-86989-default-rtdb.asia-southeast1.firebasedatabase.app/',
     authDomain: 'trspe-86989.firebaseapp.com',
     storageBucket: 'trspe-86989.appspot.com',
     measurementId: 'G-ZBYS66B0ZE',
@@ -57,6 +58,7 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyDZ-oNBBvmzUCD1wxBPTmdf-P4PN1qPMyM',
     appId: '1:333510438076:android:e7a91d515f32c01c7474b9',
     messagingSenderId: '333510438076',
+    databaseURL: 'https://trspe-86989-default-rtdb.asia-southeast1.firebasedatabase.app/',
     projectId: 'trspe-86989',
     storageBucket: 'trspe-86989.appspot.com',
   );
@@ -66,6 +68,7 @@ class DefaultFirebaseOptions {
     appId: '1:333510438076:ios:b5112306595af46f7474b9',
     messagingSenderId: '333510438076',
     projectId: 'trspe-86989',
+    databaseURL: 'https://trspe-86989-default-rtdb.asia-southeast1.firebasedatabase.app/',
     storageBucket: 'trspe-86989.appspot.com',
     iosBundleId: 'com.example.test',
   );
@@ -74,6 +77,7 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyBqEmC4xsb2pSuyxzxReg7XPun7sO1WrZc',
     appId: '1:333510438076:ios:b5112306595af46f7474b9',
     messagingSenderId: '333510438076',
+    databaseURL: 'https://trspe-86989-default-rtdb.asia-southeast1.firebasedatabase.app/',
     projectId: 'trspe-86989',
     storageBucket: 'trspe-86989.appspot.com',
     iosBundleId: 'com.example.test',

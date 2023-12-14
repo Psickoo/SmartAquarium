@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class RGB extends StatefulWidget {
   @override
@@ -12,6 +13,14 @@ class _RGBState extends State<RGB> {
   final user = FirebaseAuth.instance.currentUser!;
   Color pickerColor = Color(0xff64CCC5);
   Color currentColor = Color(0xff64CCC5);
+  final DatabaseReference colorRef = FirebaseDatabase.instance.reference().child('color');
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   // Initialize the database reference
+  //   colorRef = FirebaseDatabase.instance.reference().child('color');
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -125,6 +134,9 @@ class _RGBState extends State<RGB> {
                                     .toRadixString(16)
                                     .substring(2);
                                 print(hexColor);
+
+                                // Update the color value in the Realtime Database
+                                colorRef.set(hexColor);
                               },
                               child: Text('Change Color'),
                             ),
