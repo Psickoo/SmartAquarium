@@ -149,7 +149,7 @@ class _LoginPageState extends State<LoginPage> {
                 Positioned(
                   // floatingloginAuf (39:322)
                   left: 45 * fem,
-                  top: 243 * fem,
+                  top: 180 * fem,
                   child: Container(
                     padding: EdgeInsets.fromLTRB(
                         30 * fem, 40 * fem, 30 * fem, 10 * fem),

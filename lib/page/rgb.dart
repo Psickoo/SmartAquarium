@@ -10,8 +10,8 @@ class RGB extends StatefulWidget {
 
 class _RGBState extends State<RGB> {
   final user = FirebaseAuth.instance.currentUser!;
-  Color pickerColor = Color.fromARGB(255, 255, 255, 255);
-  Color currentColor = Color.fromARGB(255, 0, 0, 0);
+  Color pickerColor = Color(0xff64CCC5);
+  Color currentColor = Color(0xff64CCC5);
 
   @override
   Widget build(BuildContext context) {
@@ -71,8 +71,8 @@ class _RGBState extends State<RGB> {
                       right: 25 * fem,
                       top: 100 * fem,
                       child: Container(
-                        padding: EdgeInsets.all(20),
-                        width: 350 * fem,
+                        // padding: EdgeInsets.all(),
+                        width: 400 * fem,
                         height: 500 * fem,
                         decoration: BoxDecoration(
                           border: Border.all(color: Color(0x19000000)),
@@ -88,6 +88,7 @@ class _RGBState extends State<RGB> {
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.max,
                           children: [
                             // Label for Color Picker
                             SizedBox(
@@ -106,8 +107,11 @@ class _RGBState extends State<RGB> {
                             SizedBox(height: 20),
                             // Color Picker
                             ColorPicker(
+                              portraitOnly: true,
                               pickerColor: pickerColor,
                               onColorChanged: changeColor,
+                              hexInputBar: true,
+                              pickerAreaBorderRadius: BorderRadius.circular(10),
                               enableAlpha: false,
                               showLabel: false,
                               pickerAreaHeightPercent: 0.8,
@@ -117,7 +121,10 @@ class _RGBState extends State<RGB> {
                             ElevatedButton(
                               onPressed: () {
                                 setState(() => currentColor = pickerColor);
-                                print(currentColor);
+                                String hexColor = currentColor.value
+                                    .toRadixString(16)
+                                    .substring(2);
+                                print(hexColor);
                               },
                               child: Text('Change Color'),
                             ),
