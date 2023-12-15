@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/utils.dart';
 import 'package:myapp/page/regispage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import '../components/auth_services.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({super.key});
@@ -396,7 +397,7 @@ class _LoginPageState extends State<LoginPage> {
                             margin: EdgeInsets.fromLTRB(
                                 0 * fem, 0 * fem, 0 * fem, 0 * fem),
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () => AuthService().signInWIthGoogle(),
                               style: TextButton.styleFrom(
                                 padding: EdgeInsets.zero,
                               ),

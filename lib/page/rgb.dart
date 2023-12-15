@@ -15,12 +15,6 @@ class _RGBState extends State<RGB> {
   Color currentColor = Color(0xff64CCC5);
   final DatabaseReference colorRef = FirebaseDatabase.instance.reference().child('color');
 
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   // Initialize the database reference
-  //   colorRef = FirebaseDatabase.instance.reference().child('color');
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -133,7 +127,7 @@ class _RGBState extends State<RGB> {
                                 String hexColor = currentColor.value
                                     .toRadixString(16)
                                     .substring(2);
-                                print(hexColor);
+                                // print(hexColor);
 
                                 // Update the color value in the Realtime Database
                                 colorRef.set(hexColor);
