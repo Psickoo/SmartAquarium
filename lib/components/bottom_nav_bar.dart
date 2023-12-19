@@ -27,10 +27,6 @@ class myNavBar extends StatelessWidget {
           icon: Icons.lightbulb_outline,
           text: 'RGB',
         ),
-        GButton(
-          icon: Icons.schedule,
-          text: 'Schedule',
-        ),
       ]),
     );
   }

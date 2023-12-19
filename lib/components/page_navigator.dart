@@ -4,8 +4,8 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myapp/components/bottom_nav_bar.dart';
+import 'package:myapp/page/authpage.dart';
 import 'package:myapp/page/rgb.dart';
-import 'package:myapp/page/schedule.dart';
 import 'package:myapp/page/homepage.dart';
 import 'package:myapp/page/about.dart';
 import 'package:myapp/utils.dart';
@@ -27,7 +27,6 @@ class _pageNavState extends State<pageNav> {
   final List<Widget> _pages = [
     HomePage(),
     RGB(),
-    Schedule(),
   ];
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -42,7 +41,13 @@ class _pageNavState extends State<pageNav> {
     Navigator.pop(context);
     Navigator.push(
         context, MaterialPageRoute(builder: (context) => AboutPage()));
-}
+  }
+
+  void _navigateToLogin() {
+    Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => AuthPage()));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +79,7 @@ class _pageNavState extends State<pageNav> {
               padding: EdgeInsets.symmetric(horizontal: 25),
               child: Divider(color: Color(0xff053B50)),
             ),
-           Padding(
+            Padding(
               padding: EdgeInsets.only(left: 25),
               child: ListTile(
                 leading: Icon(Icons.info_outline, color: Colors.white),
@@ -82,12 +87,15 @@ class _pageNavState extends State<pageNav> {
                 onTap: _navigateToAbout,
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(left: 25),
               child: ListTile(
                 leading: Icon(Icons.logout, color: Colors.white),
                 title: Text('LogOut', style: TextStyle(color: Colors.white)),
-                onTap: signUserOut,
+                onTap: () {
+                  signUserOut();
+                  _navigateToLogin();
+                },
               ),
             ),
           ],
